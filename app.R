@@ -188,7 +188,7 @@ server <- function(input, output, session) {
   tryCatch({
     #getValue <- read.csv("C:/Users/FORMULATRIX/Documents/R/mantis csv format/getValue - Low Volume Silicone.csv")
     
-    getValue <-  read.csv("https://raw.githubusercontent.com/raturiezgina/spccontrolchart/a0e465a883f6ec4ddc800b80d49772fbf4b9c1a1/getValue%20-%20Low%20Volume%20Silicone.csv")
+    getValue <-  read.csv("https://raw.githubusercontent.com/raturiezgina/spccontrolchart/main/getValue%20-%20LVS.csv")
     ##### Display summary statistics ######
     output$spc_plot <- renderPlotly ({
       spc_plot(getValue$serial_number,as.numeric(getValue$calculation_sd),0.1,0.107,0.093)
